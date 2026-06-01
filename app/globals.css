@@ -1,26 +1,233 @@
 @import "tailwindcss";
 
+/* ═══════════════════════════════════════════════════
+   DESIGN TOKENS — Warp-Inspired Portfolio
+   From DESIGN.md specification
+   ═══════════════════════════════════════════════════ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ─── Colors ─── */
+  --primary: #f7f5f0;
+  --on-primary: #2b2622;
+  --ink: #f7f5f0;
+  --body: #c9c0ad;
+  --body-strong: #dad2c1;
+  --mute: #aea69c;
+  --canvas: #2b2622;
+  --canvas-soft: #383330;
+  --hairline: #3f3a36;
+
+  /* ─── Heatmap warm scale ─── */
+  --heatmap-0: #2b2622;
+  --heatmap-1: #3f3a36;
+  --heatmap-2: #6b5f52;
+  --heatmap-3: #a89880;
+  --heatmap-4: #f7f5f0;
+
+  /* ─── LeetCode warm tones ─── */
+  --lc-easy: #a89880;
+  --lc-medium: #c9b896;
+  --lc-hard: #f7f5f0;
+
+  /* ─── Spacing ─── */
+  --sp-xxs: 2px;
+  --sp-xs: 4px;
+  --sp-sm: 8px;
+  --sp-md: 10px;
+  --sp-lg: 16px;
+  --sp-xl: 24px;
+  --sp-2xl: 32px;
+  --sp-3xl: 48px;
+  --sp-4xl: 64px;
+  --sp-5xl: 96px;
+
+  /* ─── Border Radius ─── */
+  --r-none: 0px;
+  --r-xxs: 1px;
+  --r-xs: 2px;
+  --r-sm: 3px;
+  --r-md: 4px;
+  --r-lg: 6px;
+  --r-pill: 9999px;
+  --r-full: 9999px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-ink: var(--ink);
+  --color-body: var(--body);
+  --color-body-strong: var(--body-strong);
+  --color-mute: var(--mute);
+  --color-canvas: var(--canvas);
+  --color-canvas-soft: var(--canvas-soft);
+  --color-hairline: var(--hairline);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-dm-mono);
+  --font-serif: var(--font-instrument-serif);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ─── Base ─── */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-inter), system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--canvas);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--hairline);
+  border-radius: var(--r-pill);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--mute);
+}
+
+/* ═══════════════════════════════════════════════════
+   ANIMATIONS
+   ═══════════════════════════════════════════════════ */
+
+/* ─── Fade in from below ─── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* ─── Staggered children ─── */
+.stagger-children > * {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+.stagger-children > *:nth-child(1) { animation-delay: 0.05s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.15s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.2s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.25s; }
+.stagger-children > *:nth-child(6) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(7) { animation-delay: 0.35s; }
+.stagger-children > *:nth-child(8) { animation-delay: 0.4s; }
+
+/* ─── Section reveal ─── */
+.section-reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.section-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Typing cursor blink ─── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* ─── Progress ring animation ─── */
+@keyframes ringFill {
+  from {
+    stroke-dashoffset: var(--ring-circumference);
+  }
+  to {
+    stroke-dashoffset: var(--ring-target);
+  }
+}
+
+.ring-animate {
+  animation: ringFill 1.5s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* ─── Count up pulse ─── */
+@keyframes countPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* ─── Heatmap cell stagger ─── */
+@keyframes heatmapFade {
+  from { opacity: 0; transform: scale(0); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ─── Hamburger morph ─── */
+.hamburger-line {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* ─── Nav mobile slide ─── */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+/* ─── Hover lift for cards ─── */
+.card-hover {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  border-color: var(--mute);
+}
+
+/* ─── Link underline animation ─── */
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--primary);
+  transition: width 0.2s ease;
+}
+.link-underline:hover::after {
+  width: 100%;
 }
