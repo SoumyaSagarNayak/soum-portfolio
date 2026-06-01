@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ Soumya Sagar Nayak — Developer Portfolio
 
-## Getting Started
+A minimalist, high-performance developer portfolio built with Next.js and Tailwind CSS. Features a Warp-inspired dark UI, live API integrations for GitHub and LeetCode, and an interactive JavaScript REPL terminal.
 
-First, run the development server:
+[![Next.js](https://img.shields.io/badge/Next.js-16+-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
+---
+
+## ✨ Key Features
+
+- **Interactive JS Terminal**: The hero section isn't just for show. Click the terminal, type JavaScript code (e.g., `developer.skills.push("Python")`), and see it execute live with scope persistence!
+- **Live GitHub Heatmap**: Dynamically fetches and renders the last 365 days of GitHub contributions in a beautiful, staggered SVG grid.
+- **LeetCode Integration**: Automatically pulls live problem-solving stats (Easy/Medium/Hard) and acceptance rates, visualized with animated progress rings.
+- **Dynamic Projects Showcase**: Fetches the latest pinned and updated repositories directly from the GitHub API.
+- **Warp-Inspired UI/UX**: A clean, distraction-free aesthetic utilizing `Inter`, `DM Mono`, and `Instrument Serif`, accented by a refined warm-dark color palette.
+- **Fully Responsive**: Flawless experience across all devices with scroll-triggered fade animations and interactive hover states.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Styling**: Vanilla CSS Variables + [Tailwind CSS](https://tailwindcss.com/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Data Fetching**: Native `fetch` with Intersection Observers for lazy rendering
+- **APIs Used**:
+  - GitHub REST API (Repositories)
+  - jogruber's GitHub Contributions API (Heatmap)
+  - LeetCode Public API Wrapper (Stats)
+
+## 🚀 Getting Started
+
+Want to run this locally or use it as a template?
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/SoumyaSagarNayak/soum-portfolio.git
+cd soum-portfolio
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Run the development server
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```text
+soum-portfolio/
+├── app/
+│   ├── components/
+│   │   ├── About.tsx          # Bio & Education
+│   │   ├── Achievements.tsx   # Accomplishments row
+│   │   ├── Contact.tsx        # Socials & Email links
+│   │   ├── Experience.tsx     # Timeline & Roles
+│   │   ├── GitHubHeatmap.tsx  # Live SVG contribution graph
+│   │   ├── Hero.tsx           # Interactive Terminal & Intro
+│   │   ├── LeetCodeStats.tsx  # Live progress rings
+│   │   ├── Navbar.tsx         # Sticky blurred nav
+│   │   ├── Projects.tsx       # Live repo fetching
+│   │   └── Skills.tsx         # Tech stack grids
+│   ├── globals.css            # Custom Design Tokens & Animations
+│   ├── layout.tsx             # Fonts & Meta tags
+│   └── page.tsx               # Component composition
+└── public/
+    └── resume/                # PDF Resume assets
+```
 
-## Learn More
+## 📬 Contact & Links
 
-To learn more about Next.js, take a look at the following resources:
+- **GitHub**: [@SoumyaSagarNayak](https://github.com/SoumyaSagarNayak)
+- **LinkedIn**: [Soumya Sagar Nayak](https://linkedin.com/in/soumya-sagar-nayak-498352295)
+- **LeetCode**: [@icesagar](https://leetcode.com/u/icesagar/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Designed & Built by Soumya Sagar Nayak*
