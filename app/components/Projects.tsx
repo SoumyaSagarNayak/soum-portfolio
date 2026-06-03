@@ -90,7 +90,7 @@ export default function Projects() {
               lineHeight: "18px",
             }}
           >
-            06
+            07
           </span>
           <h2
             className="text-[var(--ink)]"

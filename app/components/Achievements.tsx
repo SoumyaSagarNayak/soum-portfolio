@@ -59,7 +59,7 @@ export default function Achievements() {
               lineHeight: "18px",
             }}
           >
-            07
+            08
           </span>
           <h2
             className="text-[var(--ink)]"

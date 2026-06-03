@@ -4,11 +4,10 @@ import { useState, useEffect } from "react";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
-  { label: "GitHub", href: "#github" },
-  { label: "Skills", href: "#skills" },
-  { label: "LeetCode", href: "#leetcode" },
+  { label: "Services", href: "#services" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
+  { label: "Certificates", href: "#certificates" },
   { label: "Contact", href: "#contact" },
 ];
 

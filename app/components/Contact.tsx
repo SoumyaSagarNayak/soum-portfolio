@@ -66,7 +66,7 @@ export default function Contact() {
               lineHeight: "18px",
             }}
           >
-            08
+            10
           </span>
           <h2
             className="text-[var(--ink)]"

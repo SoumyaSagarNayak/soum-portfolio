@@ -66,12 +66,9 @@ export default function About() {
             </p>
             <p
               className="text-[var(--body)]"
-              style={{ fontSize: "16px", lineHeight: "24px" }}
+              style={{ fontSize: "17px", lineHeight: "24px" }}
             >
-              From interactive Kanban boards and text-to-speech apps to
-              attendance trackers used by 150+ students — I enjoy turning ideas
-              into real products. When I&apos;m not coding, you&apos;ll find me solving
-              DSA problems, playing chess, or doodling in my sketchbook.
+              I love building products that solve real problems. Confident in frontend development and comfortable working with backend technologies, I enjoy creating scalable, responsive, and user-friendly applications. Whether it's designing interfaces, integrating APIs, or optimizing performance, I thrive on turning ideas into polished products. Outside of coding, you'll usually find me solving DSA problems, playing chess, or sketching.
             </p>
           </div>
 

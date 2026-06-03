@@ -64,7 +64,7 @@ export default function Experience() {
               lineHeight: "18px",
             }}
           >
-            05
+            06
           </span>
           <h2
             className="text-[var(--ink)]"
