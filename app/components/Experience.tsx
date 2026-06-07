@@ -20,7 +20,7 @@ const EXPERIENCES = [
   {
     role: "Summer Intern",
     company: "Overload Ware Labs AI (OWL-AI)",
-    period: "Jun 2025 – Jul 2025",
+    period: "Aug 2025 – Aug 2025",
     points: [
       "Selected as part of OWL-AI's inaugural batch (top 250 out of 1000+ applicants) for a 1-month virtual internship.",
       "Developed the OWL AI Project, gaining hands-on experience in AI applications and real-world project workflows.",
