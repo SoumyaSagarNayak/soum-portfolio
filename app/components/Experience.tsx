@@ -4,6 +4,20 @@ import { useEffect, useRef } from "react";
 
 const EXPERIENCES = [
   {
+    role: "Full Stack Engineer",
+    company: "Coinslive.in",
+    period: "May 2026 – Jun 2026",
+    points: [
+      "Built responsive UI features using React/HTML/CSS that improved content accessibility for non-technical learners.",
+      "Contributed to a platform designed to reduce Web3 misinformation—supporting real-world digital literacy impact.",
+    ],
+    skills: ["HTML5", "Zapier", "React.js", "CSS3", "JavaScript"],
+    links: [
+      { label: "Website", url: "https://coinslive.in" },
+      { label: "Offer Letter", url: "/resume/offer_letter_soumyacoin.pdf" },
+    ],
+  },
+  {
     role: "Summer Intern",
     company: "Overload Ware Labs AI (OWL-AI)",
     period: "Jun 2025 – Jul 2025",
@@ -12,6 +26,7 @@ const EXPERIENCES = [
       "Developed the OWL AI Project, gaining hands-on experience in AI applications and real-world project workflows.",
       "Contributed to live projects with mentorship, enhancing practical skills in AI, teamwork, and problem-solving.",
     ],
+    skills: ["Python", "Machine Learning", "AI Applications", "Teamwork"],
     links: [
       { label: "GitHub", url: "https://github.com/SoumyaSagarNayak/owl.ai" },
       { label: "Live", url: "https://owl-ai-zeta.vercel.app/" },
@@ -26,6 +41,7 @@ const EXPERIENCES = [
       "Strengthened skills in communication, teamwork, multi-tasking, and real-time problem-solving.",
       "Collaborated with local and international teams for project execution, planning, and community outreach.",
     ],
+    skills: ["Leadership", "Event Management", "Communication", "Problem-solving"],
     links: [],
   },
 ];
@@ -129,6 +145,27 @@ export default function Experience() {
                   </li>
                 ))}
               </ul>
+
+              {exp.skills && exp.skills.length > 0 && (
+                <div className="flex flex-wrap gap-1.5 mt-[var(--sp-lg)]">
+                  {exp.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="text-[var(--mute)] border border-[var(--hairline)] hover:border-[var(--mute)] hover:text-[var(--ink)] transition-colors cursor-default"
+                      style={{
+                        fontFamily: "var(--font-dm-mono), ui-monospace, monospace",
+                        fontSize: "11px",
+                        lineHeight: "15px",
+                        padding: "2px 6px",
+                        borderRadius: "var(--r-sm)",
+                        background: "var(--canvas-soft)",
+                      }}
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              )}
 
               {exp.links.length > 0 && (
                 <div className="flex gap-[var(--sp-lg)] mt-[var(--sp-lg)]">
