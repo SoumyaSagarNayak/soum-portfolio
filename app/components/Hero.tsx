@@ -141,6 +141,7 @@ export default function Hero() {
                 fontFamily:
                   "var(--font-instrument-serif), Georgia, 'Times New Roman', serif",
                 fontStyle: "italic",
+                fontWeight: 300,
                 letterSpacing: "-0.5px",
               }}
             >

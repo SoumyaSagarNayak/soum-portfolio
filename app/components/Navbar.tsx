@@ -37,7 +37,7 @@ export default function Navbar() {
           className="text-[var(--ink)] font-medium text-[14px] leading-[20px] tracking-tight no-underline hover:opacity-80 transition-opacity"
           style={{ fontFamily: "var(--font-inter), system-ui, sans-serif" }}
         >
-          Soumya Sagar
+          Soum-Portfolio
         </a>
 
         {/* Desktop Links */}
