@@ -1,8 +1,17 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
-const CERTIFICATES = [
+interface Certificate {
+  name: string;
+  issuer: string;
+  issued_at: string;
+  image: string;
+  url: string;
+  description: string;
+}
+
+const CERTIFICATES: Certificate[] = [
   {
     name: "SAP Certified - Back-End Developer - ABAP Cloud",
     issuer: "SAP",
@@ -97,6 +106,7 @@ function formatDate(dateStr: string) {
 
 export default function Certificates() {
   const ref = useRef<HTMLElement>(null);
+  const [certificates, setCertificates] = useState<Certificate[]>(CERTIFICATES.slice(0, 5));
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -109,6 +119,43 @@ export default function Certificates() {
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    fetch("/api/badges")
+      .then((res) => {
+        if (!res.ok) throw new Error("Network response was not ok");
+        return res.json();
+      })
+      .then((json) => {
+        if (json && Array.isArray(json.data)) {
+          const mapped: Certificate[] = json.data.map((item: any) => {
+            const issuerName =
+              item.issuer?.entities?.[0]?.entity?.name ||
+              item.badge_template?.issuer?.entities?.[0]?.entity?.name ||
+              item.issuer?.summary?.replace(/^issued by\s+/i, "") ||
+              "";
+
+            const verifyUrl = item.id
+              ? `https://www.credly.com/badges/${item.id}`
+              : item.badge_template?.url || "";
+
+            return {
+              name: item.badge_template?.name || "",
+              issuer: issuerName,
+              issued_at: item.issued_at_date || item.issued_at?.split("T")[0] || "",
+              image: item.badge_template?.image_url || item.badge_template?.image?.url || "",
+              url: verifyUrl,
+              description: item.badge_template?.description || "",
+            };
+          });
+          // Limit to at most 5 certificates
+          setCertificates(mapped.slice(0, 5));
+        }
+      })
+      .catch((err) => {
+        console.error("Failed to load dynamic certificates, falling back to static:", err);
+      });
   }, []);
 
   return (
@@ -152,7 +199,7 @@ export default function Certificates() {
 
         {/* Grid layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[var(--sp-lg)]">
-          {CERTIFICATES.map((cert, i) => (
+          {certificates.map((cert, i) => (
             <div
               key={cert.name}
               className="border border-[var(--hairline)] card-hover flex flex-col sm:flex-row gap-[var(--sp-lg)]"
