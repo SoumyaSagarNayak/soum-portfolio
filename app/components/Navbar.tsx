@@ -56,7 +56,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="/resume/re.pdf"
+            href="/resume/Update_Resume_jul2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-2 inline-flex items-center text-[var(--on-primary)] text-[14px] font-medium leading-[20px] no-underline hover:opacity-90 transition-opacity"
