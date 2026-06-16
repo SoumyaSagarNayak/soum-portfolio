@@ -166,7 +166,7 @@ export default function About() {
                         fontWeight: 500,
                       }}
                     >
-                      CGPA: 8.45
+                      CGPA: 8.55
                     </span>
                   </div>
                 </div>
