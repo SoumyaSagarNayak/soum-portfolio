@@ -5,6 +5,31 @@ import { useEffect, useRef } from "react";
 const EXPERIENCES = [
   {
     role: "Full Stack Engineer",
+    company: "Webyalaya",
+    period: "Jun 2026 – Present",
+    points: [
+      "Developing and maintaining full-stack features for a peer-to-peer learning platform using modern web technologies.",
+      "Building responsive user interfaces and integrating backend APIs to deliver scalable and seamless user experiences.",
+      "Contributing to automation workflows, website improvements, and collaborative development using Git and GitHub."
+    ],
+    skills: [
+      "React.js",
+      "Node.js",
+      "JavaScript",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Git",
+      "GitHub",
+      "REST APIs"
+    ],
+    links: [
+      { label: "Website", url: "https://www.webyalaya.com/" }
+    ]
+  },
+  {
+    role: "Full Stack Engineer",
     company: "Coinslive.in",
     period: "May 2026 – Jun 2026",
     points: [
