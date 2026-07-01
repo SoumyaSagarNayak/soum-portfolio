@@ -25,7 +25,8 @@ const EXPERIENCES = [
       "REST APIs"
     ],
     links: [
-      { label: "Website", url: "https://www.webyalaya.com/" }
+      { label: "Website", url: "https://www.webyalaya.com/" },
+      { label: "Confirmation Mail", url: "/resume/Webyalaya.png" },
     ]
   },
   {
@@ -67,7 +68,9 @@ const EXPERIENCES = [
       "Collaborated with local and international teams for project execution, planning, and community outreach.",
     ],
     skills: ["Leadership", "Event Management", "Communication", "Problem-solving"],
-    links: [],
+    links: [
+      { label: "Website", url: "https://www.aiesec.in/" }
+    ],
   },
 ];
 
