@@ -4,6 +4,32 @@ import { useEffect, useRef } from "react";
 
 const EXPERIENCES = [
   {
+    role: "Full Stack Developer Intern",
+    company: "Let's Code",
+    period: "Jul 2026 – Present",
+    points: [
+      "Developing and improving full-stack features for web applications using modern development practices.",
+      "Building responsive frontend interfaces, developing backend APIs, and fixing bugs to improve application performance.",
+      "Collaborating with the mentor on feature development, writing clean and maintainable code, and providing regular progress updates."
+    ],
+    skills: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "MongoDB",
+      "REST APIs",
+      "Git",
+      "GitHub"
+    ],
+    links: [
+      { label: "Website", url: "https://www.lets-code.co.in/" },
+      { label: "Offer Letter", url: "https://docs.google.com/document/d/1PlPriTCfEKbhfXjiqeFHkp_nboGOA2PmQzUlIVocxMg/edit" }
+    ]
+  },
+  {
     role: "Full Stack Engineer",
     company: "Webyalaya",
     period: "Jun 2026 – Present",
