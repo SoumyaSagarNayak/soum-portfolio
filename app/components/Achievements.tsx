@@ -8,19 +8,23 @@ const ACHIEVEMENTS = [
     tag: "DSA",
   },
   {
-    text: "Selected in top 250 out of 1000+ applicants for OWL-AI's inaugural virtual internship batch.",
+    text: "Selected in the top 250 out of 1000+ applicants for OWL-AI's inaugural virtual internship batch.",
     tag: "Internship",
   },
   {
-    text: "Built an attendance tracker used by 150+ students with real-time percentage updates and goal tracking.",
-    tag: "Impact",
-  },
-  {
-    text: "Built and deployed 20+ real-world projects with strong UI/UX principles and responsive design practices.",
+    text: "Built and deployed real-world projects with strong UI/UX principles and responsive design practices.",
     tag: "Projects",
   },
   {
+    text: "Recognized for active contributions in the Lets Code community and promoted from Community Member to Full Stack Developer Intern, collaborating directly with the founder on product improvements and growth initiatives.",
+    tag: "Growth",
+  },
+  {
     text: "Active member of Zairza (Tech Club, OUTR), collaborating on tech-driven projects and innovation initiatives.",
+    tag: "Community",
+  },
+  {
+    text: "Active member of Cetadel (Literature Club, OUTR), collaborating on creative content, community engagement, and literary initiatives.",
     tag: "Community",
   },
 ];

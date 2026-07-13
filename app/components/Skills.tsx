@@ -10,25 +10,51 @@ const SKILL_CATEGORIES = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
       </svg>
     ),
-    skills: ["C / C++", "HTML5", "CSS3", "JavaScript", "Python", "TypeScript"],
+    skills: [
+      "C++",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+    ],
   },
   {
-    title: "Frameworks",
+    title: "Frameworks & Libraries",
     icon: (
       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0L12 16.5l-5.571-2.25m11.142 0L21.75 16.5 12 21.75 2.25 16.5l4.179-2.25" />
       </svg>
     ),
-    skills: ["React.js", "Node.js", "Express.js", "Next.js", "REST APIs", "Tailwind CSS", "Bootstrap"],
+    skills: [
+      "React.js",
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "Tailwind CSS",
+      "Bootstrap",
+      "REST APIs",
+      "Socket.io",
+      "Clerk",
+      "FastAPI",
+    ],
   },
   {
-    title: "Tools",
+    title: "Tools & Technologies",
     icon: (
       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085" />
       </svg>
     ),
-    skills: ["Git", "GitHub", "MongoDB", "Vercel", "Zapier", "VS Code", "Figma"],
+    skills: [
+      "Git",
+      "GitHub",
+      "MongoDB",
+      "SQLite",
+      "Vercel",
+      "Render",
+      "Figma",
+      "VS Code",
+      "Zapier",
+    ],
   },
 ];
 

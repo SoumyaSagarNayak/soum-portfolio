@@ -8,9 +8,9 @@ const EXPERIENCES = [
     company: "Let's Code",
     period: "Jul 2026 – Present",
     points: [
-      "Developing and improving full-stack features for web applications using modern development practices.",
-      "Building responsive frontend interfaces, developing backend APIs, and fixing bugs to improve application performance.",
-      "Collaborating with the mentor on feature development, writing clean and maintainable code, and providing regular progress updates."
+      "Perform manual testing of newly developed website features, identify bugs, validate fixes, and provide actionable feedback to improve functionality and user experience.",
+      "Collaborate directly with the founder to evaluate product ideas, suggest feature enhancements, maintain website quality, and identify opportunities to improve engagement and usability.",
+      "Contribute to product growth by researching scalable features, supporting resource management for the platform, and proposing initiatives with long-term community and revenue potential."
     ],
     skills: [
       "React.js",
