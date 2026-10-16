@@ -4,32 +4,6 @@ import { useEffect, useRef } from "react";
 
 const EXPERIENCES = [
   {
-    role: "Full Stack Developer Intern",
-    company: "Let's Code",
-    period: "Jul 2026 – Present",
-    points: [
-      "Perform manual testing of newly developed website features, identify bugs, validate fixes, and provide actionable feedback to improve functionality and user experience.",
-      "Collaborate directly with the founder to evaluate product ideas, suggest feature enhancements, maintain website quality, and identify opportunities to improve engagement and usability.",
-      "Contribute to product growth by researching scalable features, supporting resource management for the platform, and proposing initiatives with long-term community and revenue potential."
-    ],
-    skills: [
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "JavaScript",
-      "HTML5",
-      "CSS3",
-      "MongoDB",
-      "REST APIs",
-      "Git",
-      "GitHub"
-    ],
-    links: [
-      { label: "Website", url: "https://www.lets-code.co.in/" },
-      { label: "Offer Letter", url: "https://docs.google.com/document/d/1PlPriTCfEKbhfXjiqeFHkp_nboGOA2PmQzUlIVocxMg/edit" }
-    ]
-  },
-  {
     role: "Full Stack Engineer",
     company: "Webyalaya",
     period: "Jun 2026 – Present",
@@ -55,6 +29,33 @@ const EXPERIENCES = [
       { label: "Confirmation Mail", url: "/resume/Webyalaya.png" },
     ]
   },
+  {
+    role: "Full Stack Developer Intern",
+    company: "Let's Code",
+    period: "Jul 2026 – Sept 2026",
+    points: [
+      "Perform manual testing of newly developed website features, identify bugs, validate fixes, and provide actionable feedback to improve functionality and user experience.",
+      "Collaborate directly with the founder to evaluate product ideas, suggest feature enhancements, maintain website quality, and identify opportunities to improve engagement and usability.",
+      "Contribute to product growth by researching scalable features, supporting resource management for the platform, and proposing initiatives with long-term community and revenue potential."
+    ],
+    skills: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "MongoDB",
+      "REST APIs",
+      "Git",
+      "GitHub"
+    ],
+    links: [
+      { label: "Website", url: "https://www.lets-code.co.in/" },
+      { label: "Offer Letter", url: "https://docs.google.com/document/d/1PlPriTCfEKbhfXjiqeFHkp_nboGOA2PmQzUlIVocxMg/edit" }
+    ]
+  },
+
   {
     role: "Full Stack Engineer",
     company: "Coinslive.in",
